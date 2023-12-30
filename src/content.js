@@ -5,9 +5,7 @@ const hideSuggestedDiv = () => {
     const spans = document.querySelectorAll('span.update-components-header__text-view');
 
     spans.forEach(span => {
-        console.log("Span", span)
         if (span.textContent.trim() === 'Suggested') {
-            console.log("Found garbage")
             const parentDiv = span.closest('.update-components-header');
             if (parentDiv && parentDiv.parentElement) {
                 parentDiv.parentElement.style.display = 'none';
@@ -78,7 +76,6 @@ chrome.runtime.onMessage.addListener(
             }
         }
         if (request.updateKeywords !== undefined) {
-            console.log("updating keywords", request.updateKeywords);
             keywords = request.updateKeywords;
             if (isBlockingEnabled) {
                 filterContentByKeywords(true, document);
