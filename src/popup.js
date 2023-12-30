@@ -5,6 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let keywordInput = document.getElementById('keywordInput');
     let keywordList = document.getElementById('keywordList');
 
+    const updateButtonAndStatus = (isEnabled) => {
+        statusDiv.textContent = `Status: ${isEnabled ? 'On' : 'Off'}`;
+    };
+
     const updateKeywordList = (keywords) => {
         keywordList.innerHTML = '';
         keywords.forEach((keyword, index) => {
@@ -68,8 +72,4 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
-
-    const updateButtonAndStatus = (isEnabled) => {
-        statusDiv.textContent = `Status: ${isEnabled ? 'On' : 'Off'}`;
-    };
 });

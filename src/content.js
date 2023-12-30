@@ -89,6 +89,7 @@ chrome.storage.local.get(['blockerEnabled', 'keywords'], (data) => {
     isBlockingEnabled = data.blockerEnabled || false;
     keywords = data.keywords || [];
     filterContentByKeywords(isBlockingEnabled, document);
+    hideSuggestedDiv();
     if (isBlockingEnabled) {
         observeLinkedInFeed();
     }
