@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "LinkedIn Suggested Blocklist",
+    "name": "LinkedIn Feed Blocklist",
     "version": "1.0",
-    "description": "Blocks all suggested posts, and non-suggested posts via a keyword blocklist",
+    "description": "Blocks all suggested posts, and user posts via a keyword blocklist",
     "permissions": ["activeTab", "scripting", "storage"],
     "action": {
         "default_icon": "icon.png",
