@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const removeKeyword = (index) => {
         chrome.storage.local.get('keywords', (data) => {
             let keywords = data.keywords || [];
-            keywords.splice(index, 1);  // Remove the keyword at the specified index
+            keywords.splice(index, 1);
             chrome.storage.local.set({'keywords': keywords}, () => {
-                updateKeywordList(keywords);  // Update the list display
+                updateKeywordList(keywords);
                 chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
                     chrome.tabs.sendMessage(tabs[0].id, {updateKeywords: keywords});
                 });
