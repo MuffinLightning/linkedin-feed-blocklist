@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LinkedIn Blocker</title>
+    <style>
+        body {
+            width: 300px;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 10px;
+        }
+        #status, #keywordList {
+            margin-top: 20px;
+        }
+        ul {
+            text-align: left;
+            padding: 0;
+        }
+        li {
+            list-style-type: none;
+            margin-bottom: 5px;
+        }
+        .removeKeyword {
+            color: red;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>LinkedIn Blocker</h1>
+    <button id="toggleButton">Toggle Block</button>
+    <div id="status">Status: Off</div>
+
+    <input type="text" id="keywordInput" placeholder="Enter keyword" />
+    <button id="addKeyword">Add Keyword</button>
+    <ul id="keywordList"></ul>
+
+    <script src="popup.js"></script>
+</body>
+</html>
